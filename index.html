@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shreeyansh</title>
+    <title>Shreeyansh Singh</title>
     <style>
         * {
             margin: 0;
@@ -19,7 +19,6 @@
             line-height: 1.6;
             min-height: 100vh;
         }
-
 
         header {
             position: fixed;
@@ -56,7 +55,7 @@
 
         @keyframes typing {
             from { width: 0; }
-            to { width: 10ch; } /* Adjust based on your name length */
+            to { width: 10ch; } 
         }
 
         @keyframes blink {
@@ -149,6 +148,7 @@
             max-width: 1200px;
             margin: 0 auto;
         }
+
 
         .hero {
             min-height: 90vh;
@@ -305,7 +305,7 @@
             box-shadow: 0 15px 40px rgba(64, 224, 208, 0.3);
         }
 
-        /* Float */
+
         .floating-elements {
             position: absolute;
             top: 0;
@@ -360,15 +360,215 @@
         }
 
 
-        @media (max-width: 768px) {
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
+        .about {
+            background: rgba(255, 255, 255, 0.02);
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #40e0d0, #ffffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+        }
+
+        .section-header p {
+            color: #b0b0b0;
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            align-items: center;
+            margin-top: 3rem;
+        }
+
+        .about-image {
+            position: relative;
+            text-align: center;
+        }
+
+        .about-image-placeholder {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #40e0d0, #48cae4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: #0f0f23;
+            font-weight: bold;
+            margin: 0 auto;
+            box-shadow: 0 20px 40px rgba(64, 224, 208, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-image-placeholder::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+            animation: shimmer 3s ease-in-out infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+
+        .about-text h3 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #40e0d0;
+            font-weight: 600;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: #d0d0d0;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            border: 1px solid rgba(64, 224, 208, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(64, 224, 208, 0.2);
+            border-color: rgba(64, 224, 208, 0.5);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(45deg, #40e0d0, #48cae4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: #b0b0b0;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+
+        .tech-stack {
+            margin-top: 3rem;
+        }
+
+        .tech-stack h4 {
+            color: #40e0d0;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+            text-align: center;
+        }
+
+        .tech-icons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .tech-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: #40e0d0;
+            border: 1px solid rgba(64, 224, 208, 0.2);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tech-icon:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 15px 30px rgba(64, 224, 208, 0.3);
+            color: #0f0f23;
+            background: linear-gradient(45deg, #40e0d0, #48cae4);
+        }
+
+
+        @media (max-width: 968px) {
+            .about-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 3rem;
             }
-            
-            .cta-button {
-                width: 100%;
+
+            .about-image-placeholder {
+                width: 250px;
+                height: 250px;
+                font-size: 3rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .about-image-placeholder {
+                width: 200px;
+                height: 200px;
+                font-size: 2.5rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
                 max-width: 300px;
+                margin: 2rem auto 0;
+            }
+
+            .tech-icons {
+                gap: 1rem;
+            }
+
+            .tech-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
             }
         }
     </style>
@@ -376,7 +576,7 @@
 <body>
     <header>
         <nav>
-            <div class="logo">Shreeyansh</div>
+            <div class="logo">Hello there !!</div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -403,11 +603,68 @@
                 <h1>Who am i ?</h1>
                 <p class="subtitle">Full Stack & Smart Contract Developer</p>
                 <p class="description">
-                    I'm Shreeyansh Singh, a developer passionate about building scalable, high-performance systems and exploring the intersection of software development and security. I thrive on solving complex problems, whether it’s optimizing backend architecture, developing secure smart contracts, or uncovering vulnerabilities to make systems more resilient. I’m always driven by curiosity, a love for clean design, and the pursuit of robust, future-ready solutions.
+                    I’m Shreeyansh Singh , I build systems that scale, break things to make them stronger, and love the challenge where performance meets security. For me, it's all about pushing limits and building with intent.
                 </p>
                 <div class="cta-buttons">
                     <a href="#projects" class="cta-button cta-primary">View My Work</a>
                     <a href="#contact" class="cta-button cta-secondary">Get In Touch</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="section-header">
+                <h2>About Me</h2>
+                <p>Get to know more about my journey, skills, and what drives my passion for development</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="about-image-placeholder">
+                        O
+                    </div>
+                </div>
+                
+                <div class="about-text">
+                    <h3>Building the Future, One Line at a Time</h3>
+                    <p>
+                       Hey, I’m Shreeyansh Singh , part coder, part problem-sleuth, and full-time curious mind. I love building systems that don’t just survive but thrive under pressure, and I’m not afraid to break things (ethically, of course) to make them better. Whether it’s writing smart contracts, fine-tuning backend magic, or hunting down security blind spots, I’m always on the lookout for the next challenge that’ll stretch my skills and push boundaries.
+                    </p>
+                    <p>
+                        I build software that’s smart, secure, and built to stand the test of time. When I’m not coding, I’m exploring the latest in security, contributing to open source, or diving into new tech challenges that keep me curious and sharp.
+                    </p>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">3+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">25++</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">Smart Contracts</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Client Satisfaction</div>
+                </div>
+            </div>
+
+            <div class="tech-stack">
+                <h4>Technologies I Work With</h4>
+                <div class="tech-icons">
+                    <div class="tech-icon">JS</div>
+                    <div class="tech-icon">TS</div>
+                    <div class="tech-icon">⚛️</div>
+                    <div class="tech-icon">📱</div>
+                    <div class="tech-icon">🔗</div>
+                    <div class="tech-icon">☁️</div>
+                    <div class="tech-icon">🔒</div>
                 </div>
             </div>
         </section>
